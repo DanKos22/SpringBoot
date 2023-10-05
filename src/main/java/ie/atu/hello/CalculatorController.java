@@ -13,10 +13,12 @@ public class CalculatorController {
 
 
     number total = new number();
-    int num1 = 6, num2 = 2;
-    int sum;  //= getTotal();
+    int num1, num2;
+    String operation;  //= getTotal();
+
+
     @GetMapping("/calculate")
-    public String calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam int add) {
+    public String calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation) {
         //int total = num1 + num2;
         return "operation: " + "\tadd" + "\ttotal:" + total.getTotal();
     }
